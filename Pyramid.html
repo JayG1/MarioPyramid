@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript Pyramid</title>
+    <style>
+    body {
+      font-family: courier;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Mario Pyramid</h1>
+      <p>Enter a number of rows for the pyramid to be generated.</p>
+      <input type='text' id='userInput' placeholder='Enter rows here...'></input><br>
+      <button onclick='rFunction()'>Submit</button>
+      <p id='Pyra'></p>
+    <script type="text/javascript">
+function rFunction() {
+  document.getElementById('Pyra').innerHTML = '';
+  var userInput = document.getElementById('userInput').value;;
+
+  for (var i = 1; i <= userInput; i++) {
+
+    for (var k = 1; k <= (userInput - i); k++) {
+      document.getElementById('Pyra').innerHTML += ('&nbsp');
+    }
+
+    for (var j = 1; j <= i; j++) {
+      document.getElementById('Pyra').innerHTML += ('# ');
+    }
+
+    document.getElementById('Pyra').innerHTML += ('<br/>');
+  }
+};
+    </script>
+  </body>
+</html>
